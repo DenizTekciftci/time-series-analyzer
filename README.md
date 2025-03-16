@@ -19,13 +19,21 @@ npm install
 
 # Local deployment
 
-From the price_api folder running the following command starts the django server running on port 8000.
+From the price_api folder running the following command makes the necessary migrations 
+
+```
+py manage.py migrate
+```
+
+The following runs the server listening on port 8000.
 
 ```
 py manage.py runserver
 ```
 
-From the src folder running the following command starts the frontend on port 5173.
+To initialize the sqlite database with the data in price_api/input_data.json, simply hitting the "load" endpoint is sufficient, i.e., go to localhost:8000/load.
+
+Running the following command from the root starts the frontend on port 5173.
 ```
 npm run dev
 ```
